@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Gris Audio Technologie et Gaming Logo.png" />
+    <None Remove="image\blur.png" />
+    <None Remove="image\brow.png" />
+    <None Remove="image\favorite.png" />
+    <None Remove="image\file.png" />
+    <None Remove="image\heart.png" />
+    <None Remove="image\home.png" />
+    <None Remove="image\left.png" />
+    <None Remove="image\logo.png" />
+    <None Remove="image\music.jpg" />
+    <None Remove="image\play.png" />
+    <None Remove="image\repeat.png" />
+    <None Remove="image\right.png" />
+    <None Remove="image\search.png" />
+    <None Remove="image\setting.png" />
+    <None Remove="image\shuffle.png" />
+    <None Remove="image\tt.png" />
+    <None Remove="music.jpg" />
+    <None Remove="search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Gris Audio Technologie et Gaming Logo.png" />
+    <Resource Include="image\blur.png" />
+    <Resource Include="image\brow.png" />
+    <Resource Include="image\favorite.png" />
+    <Resource Include="image\file.png" />
+    <Resource Include="image\heart.png" />
+    <Resource Include="image\home.png" />
+    <Resource Include="image\left.png" />
+    <Resource Include="image\logo.png" />
+    <Resource Include="image\music.jpg" />
+    <Resource Include="image\play.png" />
+    <Resource Include="image\repeat.png" />
+    <Resource Include="image\right.png" />
+    <Resource Include="image\search.png" />
+    <Resource Include="image\setting.png" />
+    <Resource Include="image\shuffle.png" />
+    <Resource Include="image\tt.png" />
+    <Resource Include="music.jpg" />
+    <Resource Include="search.png" />
+  </ItemGroup>
+
+</Project>

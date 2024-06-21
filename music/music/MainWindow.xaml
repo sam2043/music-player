@@ -1,0 +1,632 @@
+﻿<Window x:Class="music.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:music"
+       MouseMove="Window_MouseMove"
+        mc:Ignorable="d"
+        Title="MainWindow" MaxHeight="550" MaxWidth="800"
+        MinHeight="550" MinWidth="800"
+        FontStretch="Normal"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+   
+    <Border>
+
+        <Grid Background="#0F141D">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="/image/logo.png" Width="70" Height="70"
+                   Stretch="Fill"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="10"/>
+            <StackPanel Grid.Column="1" Grid.Row="0"
+                        Height="180"
+                        VerticalAlignment="Top">
+                <Image Source="/image/blur.png" Stretch="Uniform"/>
+            </StackPanel>
+            <Border Grid.Column="1" Grid.Row="0" Height="30" Width="30"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0 17 80 0"
+                    CornerRadius="80"
+                    BorderThickness="1"
+                    BorderBrush="#74777C">
+                <Border.Background>
+                    <ImageBrush TileMode="None" ImageSource="/Gris Audio Technologie et Gaming Logo.png"/>
+                </Border.Background>
+            </Border>
+
+
+            <Button Grid.Column="1" Grid.Row="0"
+                    Height="20"
+                    Style="{DynamicResource button2}"
+                    Width="20"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0 8 8 0"
+                    Content="X"
+                    FontStretch="Medium"
+                    FontStyle="Normal"
+                    FontWeight="Medium"
+                    Background="Transparent"
+                    Foreground="White"
+                    BorderBrush="#74777C"
+                    Click="Buttonclose"></Button>
+            <Button Grid.Column="1" Grid.Row="0"
+                    Height="20"
+                    Style="{DynamicResource button2}"
+                    Width="20"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0 8 30 0"
+                    Content="-"
+                    FontStretch="Medium"
+                    FontStyle="Normal"
+                    FontWeight="Medium"
+                    Background="Transparent"
+                    Foreground="White"
+                    BorderBrush="#74777C"
+                    Click="Buttonshot"
+                    ></Button>
+            <StackPanel Width="150">
+                <Button Height="18"
+                        
+                        Width="120"
+                        Background="#0F141D"
+                        Content="Home"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        HorizontalContentAlignment="Left"
+                        Margin="0 100 0 0"
+                        BorderBrush="#0F141D"
+                        ></Button>
+                <Button Height="18"
+                        Width="120"
+                        Background="#0F141D"
+                        Content="Browser"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        Margin="0 12 0 0"
+                        BorderBrush="#0F141D"
+                        HorizontalContentAlignment="Left"
+                        ></Button>
+                <Button Height="18"
+                        Width="120"
+                        Background="#0F141D"
+                        Content="File"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        Margin="0 12 0 0"
+                        BorderBrush="#0F141D"
+                        HorizontalContentAlignment="Left"
+                        ></Button>
+                <Button Height="18"
+                        Width="120"
+                        Background="#0F141D"
+                        Content="Playliste"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        Margin="0 12 0 0"
+                        BorderBrush="#0F141D"
+                        HorizontalContentAlignment="Left"
+                        ></Button>
+                <Button Height="18"
+                        Width="120"
+                        Background="#0F141D"
+                        Content="Favorite"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        Margin="0 12 0 0"
+                        BorderBrush="#0F141D"
+                        HorizontalContentAlignment="Left" Click="Button_Click_2"
+                        ></Button>
+                <Button Height="18"
+                        Width="120"
+                        Background="#0F141D"
+                        Content="Setting"
+                        Foreground="#74777C"
+                        FontSize="10"
+                        Margin="0 12 0 0"
+                        BorderBrush="#0F141D"
+                        HorizontalContentAlignment="Left"
+                        ></Button>
+
+            </StackPanel>
+
+            <StackPanel Width="50" HorizontalAlignment="Left">
+                <Image Source="/image/home.png" Width="18" Height="18" Margin="20 100 0 0"/>
+                <Image Source="/image/brow.png" Width="18" Height="18" Margin="20 12 0 0"/>
+                <Image Source="/image/file.png" Width="18" Height="18" Margin="20 12 0 0"/>
+                <Image Source="/image/play.png" Width="18" Height="18" Margin="20 12 0 0"/>
+                <Image Source="/image/favorite.png" Width="18" Height="18" Margin="20 12 0 0"/>
+                <Image Source="/image/setting.png" Width="18" Height="18" Margin="20 12 0 0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+                <Image Source="/image/music.jpg" Width="110" Height="110" Stretch="Fill"/>
+            </StackPanel>
+
+            <TextBlock Grid.Column="0" Grid.Row="2"
+                       Text="Enemy music"
+                       FontSize="18"
+                       FontStretch="Medium"
+                       FontFamily="normal"
+                       FontWeight="Medium"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="5">
+            </TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Tera music"
+                       Foreground="#74777C"
+                       FontSize="8"
+                       FontStretch="Medium"
+                       FontStyle="Normal"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="30"></TextBlock>
+            <StackPanel Grid.Row="2" Grid.Column="0" >
+                <Image Source="/image/heart.png" Height="18" Width="18" HorizontalAlignment="Right" Margin="0 8 12 0"/>
+            </StackPanel>
+
+            <Button Background="#3B444B" Grid.Column="1" Grid.Row="2" Height="35" Width="35" VerticalAlignment="Top"
+                    Margin="0 10 0 0"
+                   Style="{DynamicResource button2}">
+                <Image Source="/image/tt.png" Width="20" Height="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Background="#0F141D" Grid.Column="1" Grid.Row="2" Height="25" Width="25" VerticalAlignment="Top"
+                    Margin="0 16 90 0"
+                   Style="{DynamicResource button3}">
+                <Image Source="/image/left.png" Width="20" Height="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Background="#0F141D" Grid.Column="1" Grid.Row="2" Height="25" Width="25" VerticalAlignment="Top"
+                    Margin="180 16 90 0"
+                   Style="{DynamicResource button3}">
+                <Image Source="/image/right.png" Width="20" Height="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Background="#0F141D" Grid.Column="1" Grid.Row="2" Height="25" Width="25" VerticalAlignment="Top"
+                    Margin="300 16 0 0"
+                   Style="{DynamicResource button3}">
+                <Image Source="/image/repeat.png" Width="15" Height="15"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Background="#0F141D" Grid.Column="1" Grid.Row="2" Height="25" Width="25" VerticalAlignment="Top"
+                    Margin="355 16 0 0"
+                   Style="{DynamicResource button3}">
+                <Image Source="/image/shuffle.png" Width="15" Height="15"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+
+            <Border Grid.Column="1" Grid.Row="0"
+                    Height="80"
+                    Width="80"
+                    CornerRadius="15"
+                    BorderBrush="#0F141D"
+                    BorderThickness="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="20 65 0 0">
+                <Border.Background>
+                    <ImageBrush ImageSource="/music.jpg"/>
+                </Border.Background>
+
+            </Border>
+            <TextBlock Text="Imagine Dragons x JID"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Foreground="White"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       FontStyle="Normal"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0 95 150 0"></TextBlock>
+            <TextBlock Text=" Create By Dan Reynolds"
+                       Foreground="#74777C"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       FontSize="7"
+                       FontWeight="Medium"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="110 0 0 80"></TextBlock>
+            <Border Grid.Column="1" Grid.Row="0" CornerRadius="10" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 23 0 0">
+                <TextBox Tag="Search"
+                     Height="20"
+                     Width="130"
+                    BorderThickness="1"
+                    BorderBrush="Black"
+                    Foreground="Gray"
+                    FontSize="10" 
+                    Background="Transparent">
+
+
+                </TextBox>
+            </Border>
+
+            <Border CornerRadius="10" Grid.Column="1" Grid.Row="0" Margin="0,189,0,0" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--titre-->
+                    <TextBlock Text="Titre"
+                               Grid.Column="0"
+                               Foreground="#74777C"
+                               HorizontalAlignment="Left"
+                               Margin="15 0 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Bold"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="Enemy imagine dra.."
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 30 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"
+                               x:Name="blok"
+                              ></TextBlock>
+                    <TextBlock Text="Toxic"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 57 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Fall Out Boy"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 84 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Believer"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 111 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Heat Waves"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 138 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Gym Class Heros"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 165 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Clean Bandit"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 192 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Futer Mask off"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 219 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Stay"
+                               Grid.Column="0"
+                               Foreground="White"
+                               HorizontalAlignment="Stretch"
+                               Margin="15 241 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <!--artist-->
+                    <TextBlock Text="Artist"
+                               Grid.Column="1"
+                               Foreground="#74777C"
+                               HorizontalAlignment="Left"
+                               Margin="15 0 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Bold"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="IM Dragon"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 30 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="BoyWhith"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 57 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Flume"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 84 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="IM Dragon"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 111 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Frank"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 138 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="IDaft"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 165 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="cleanclub"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 192 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Futer"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 219 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="BoyWhith"
+                               Grid.Column="1"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 243 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+
+
+                    <!--album-->
+                    <TextBlock Text="Album"
+                               Grid.Column="2"
+                               Foreground="#74777C"
+                               HorizontalAlignment="Left"
+                               Margin="15 0 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Bold"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="Dragon"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 30 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="BoyWhith"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 57 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Flume dark"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 84 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="IMagine dragon"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 111 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Idraft flow"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 138 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Gym class"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 165 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Clean"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 192 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="FUter now"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 219 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+                    <TextBlock Text="Stay"
+                               Grid.Column="2"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="15 242 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="12"></TextBlock>
+
+                    <!--duration-->
+                    <TextBlock Text="Duration"
+                               Grid.Column="3"
+                               Foreground="#74777C"
+                               HorizontalAlignment="Left"
+                               Margin="40 0 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Bold"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="3:12"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 30 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="2:02"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 57 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="1:42"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 84 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="4:12"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 111 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="1:52"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 138 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="4:62"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 165 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="1:62"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 192 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="3:02"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 219 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+                    <TextBlock Text="3:12"
+                               Grid.Column="3"
+                               Foreground="White"
+                               HorizontalAlignment="Left"
+                               Margin="65 242 0 0"
+                               FontStyle="Normal"
+                               FontWeight="Medium"
+                               FontSize="11"></TextBlock>
+
+                </Grid>
+
+
+            </Border>
+            <StackPanel Grid.Column="0" Height="100"  Width="3" Opacity="0.5" Grid.RowSpan="3"
+                        Background="#74777C"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 150 6 0"></StackPanel>
+            <Slider Grid.Row="2"
+                    VerticalAlignment="Top"
+                    Margin="133,58,18,0" Grid.ColumnSpan="2" Background="{DynamicResource color1}"
+                    Foreground="{DynamicResource color1}"/>
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       Text="0:00"
+                       Foreground="#74777C"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Center"
+                       Margin="15 0 0 15"
+                       FontWeight="Medium"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       Text="3:12"
+                       Foreground="#74777C"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Right"
+                       Margin="0 0 25 15"
+                       FontWeight="Medium" Grid.ColumnSpan="2"
+                       ></TextBlock>
+        </Grid>
+    </Border>
+</Window>  
